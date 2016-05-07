@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="sampleApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Firebase Pratice</title>
+</head>
+
+<body ng-controller="SampleController">
+
+    <ul class="chatbox">
+        <li ng-repeat="message in messages">{{ message.from }}: {{ message.content }}</li>
+    </ul>
+    <form ng-submit="addMessage()">
+        <input type="text" ng-model="message">
+        <input type="submit" value="Add Message">
+    </form>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
